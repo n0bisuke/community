@@ -23,9 +23,18 @@ jobs:
       run: |
         yarn install
         yarn generate
-        ./.github/gitpush.sh
+        # ./.github/gitpush.sh
         # npm ci
         # npm run build --if-present
         # npm test
+     - name: Commit files
+      run: |
+        git config --local user.name "n0bisuke"
+        git config --local user.email "n0bisuke@github.com"
+        git commit -m "Add changes" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
       env:
         CI: true
