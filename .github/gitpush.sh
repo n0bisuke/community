@@ -1,5 +1,5 @@
 git config --global user.name "n0bisuke"
-git config --global user.email "n0bisuke@gmail.com"
+git config --global user.email "rsksound@gmail.com"
 
 git remote set-url origin https://n0bisuke:${GITHUB_TOKEN}@github.com/n0bisuke/community.git
 
