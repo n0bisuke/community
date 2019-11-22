@@ -1,8 +1,8 @@
 git config --global user.name "n0bisuke"
 git config --global user.email "rsksound@gmail.com"
 
-git remote set-url origin https://n0bisuke:${GITHUB_TOKEN}@github.com/n0bisuke/community.git
-
+git remote set-url origin https://${GITHUB_TOKEN}@github.com/n0bisuke/community.git
+# git remote set-url origin https://n0bisuke:${GITHUB_TOKEN}@github.com/n0bisuke/community.git
 git checkout -b master
 git branch -a
 
