@@ -27,7 +27,7 @@ jobs:
         # npm ci
         # npm run build --if-present
         # npm test
-     - name: Commit files
+    #  - name: Commit files
       run: |
         yarn install
         yarn generate
