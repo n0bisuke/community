@@ -17,6 +17,7 @@ if [ -z "$(echo $last_commit_message | grep updater)" ]; then
     # cat last_commit.txt
     git add -A
     git commit -m '[updater] update last commit'
+    git pull origin HEAD
     git push origin HEAD
 else
     echo "nothing updated"
