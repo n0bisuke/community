@@ -12,9 +12,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+    - name: yarn
+      run: |
+        yarn install
     - name: gitpush
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        yarn install
         ./.github/gitpush.sh
