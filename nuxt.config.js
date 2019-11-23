@@ -82,7 +82,7 @@ export default {
     }
   },
 
-  generate: {
-    dir: 'docs'
-  }
+  // generate: {
+  //   dir: 'docs'
+  // }
 }
