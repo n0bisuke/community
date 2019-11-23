@@ -1,4 +1,4 @@
-name: test
+name: deploy
 
 on: [push]
 
@@ -9,7 +9,14 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: test
+    - name: Use Node.js ${{ matrix.node-version }}
+      with:
+        node-version: ${{ matrix.node-version }}
+      run: |
+        yarn install
+        yarn generate
+
+    - name: gitpush
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: ./.github/gitpush.sh
