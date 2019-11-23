@@ -9,7 +9,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "deploy": "git add -A && git commit -m 'deploy' && git push origin master"
+    "deploy": "git add -A && git commit -m 'deploy' && git pull origin master && git push origin master"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.8.0",
