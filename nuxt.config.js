@@ -44,6 +44,19 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
   ],
+
+  //PWA
+  manifest: {
+    lang: 'ja-JP',
+    name: val.title,
+    short_name: val.title,
+    description: val.description,
+    background_color: '#ffffff',
+    theme_color: '#ffffff',
+    display: 'standalone',
+    orientation: 'portrait'
+  },
+
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
