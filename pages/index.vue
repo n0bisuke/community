@@ -8,6 +8,13 @@
       <h2 class="subtitle">
         My smashing Nuxt.js project
       </h2>
+
+      <ul id="example-1">
+        <li v-for="(item, index) in communityData" :key="index">
+          {{ item.name }}
+          {{ item.event }}
+        </li>
+      </ul>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
@@ -30,11 +37,21 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
+import communityData from '~/data/connpass.json'
+
+// console.log(communityData);
 
 export default {
   components: {
     Logo
+  },
+
+  data () {
+    return {
+      communityData: communityData
+    }
   }
+
 }
 </script>
 

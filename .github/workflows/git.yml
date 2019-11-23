@@ -18,6 +18,7 @@ jobs:
         yarn generate
       env:
         CI: true
+        
     - name: gitpush
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
