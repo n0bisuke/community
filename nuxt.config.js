@@ -1,4 +1,11 @@
 
+const baseurl = `https://n0bisuke.github.io/community/`;
+const val = {
+  description: `communityアナライズ`,
+  title: `communityアナライズ`,
+  image: `${baseurl}/ogp.png`
+}
+
 export default {
   mode: 'universal',
   /*
