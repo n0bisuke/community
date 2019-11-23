@@ -15,7 +15,8 @@ jobs:
       run: |
         yarn install
         yarn generate
-
+        
+    steps:
     - name: gitpush
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
