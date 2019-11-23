@@ -1,3 +1,4 @@
+'use strict'
 
 const baseurl = `https://n0bisuke.github.io/community/`;
 const val = {
