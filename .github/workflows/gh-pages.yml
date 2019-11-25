@@ -28,13 +28,12 @@ jobs:
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
           ${{ runner.os }}-node-
-    
-    - name: connpass
-      run : node iotlt/app.js
-    
+    
     - name: install
       run: yarn install
 
+    - name: connpass
+      run : node iotlt/app.js
     # - name: test
     #   run: npm test
 
