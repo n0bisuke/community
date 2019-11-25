@@ -33,8 +33,7 @@ jobs:
       run: yarn install
     - name: connpass
       run: yarn dataupdate
-    # - name: connpass
-    #   run: yarn dataupdate
+
     # - name: test
     #   run: npm test
     - name: generate
