@@ -10,7 +10,7 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "deploy": "git add -A && git commit -m 'deploy' && git pull origin master && git push origin master",
-    "dataupdate": "node iotlt/app.js"
+    "dataupdate": "node ./iotlt/app.js"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.8.0",
