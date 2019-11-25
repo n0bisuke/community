@@ -19,7 +19,7 @@ const community = new Connpass(`https://${groupname}.connpass.com/`);
     /**
      * データ更新処理
      * */
-    const PATH = "./connpass.json";
+    const PATH = "./data/connpass.json";
     const readTxt = fs.readFileSync(PATH, 'utf8');
     const communityData = JSON.parse(readTxt);
     communityData[groupname] = c; //新規 or 更新
