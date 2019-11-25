@@ -8,6 +8,11 @@ on:
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [13.x]
+    
     steps:
     - uses: actions/checkout@master
 
