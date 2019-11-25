@@ -31,9 +31,8 @@ jobs:
     
     - name: install
       run: yarn install
-
     - name: connpass
-      run : node iotlt/app.js
+      run: yarn dataupdate
     # - name: test
     #   run: npm test
 
