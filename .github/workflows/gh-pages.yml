@@ -31,6 +31,8 @@ jobs:
     
     - name: install
       run: yarn install
+    - name: connpass
+      run: yarn dataupdate
     # - name: connpass
     #   run: yarn dataupdate
     # - name: test
