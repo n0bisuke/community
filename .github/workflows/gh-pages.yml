@@ -31,15 +31,12 @@ jobs:
     
     - name: install
       run: yarn install
-      
-    - name: connpass
-      run: yarn dataupdate
+    # - name: connpass
+    #   run: yarn dataupdate
     # - name: test
     #   run: npm test
-
     - name: generate
       run: yarn generate
-
     - name: deploy
       uses: peaceiris/actions-gh-pages@v2.4.0
       env:
