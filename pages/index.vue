@@ -11,8 +11,10 @@
 
       <ul id="example-1">
         <li v-for="(item, index) in communityData" :key="index">
-          {{ item.name }}
-          {{ item.event }}
+          名前: {{ item.name }}
+          イベント数: {{ item.event }}
+          累計: {{ item.total_member }}
+          ユニーク: {{ item.uniq_member }}
         </li>
       </ul>
       <div class="links">

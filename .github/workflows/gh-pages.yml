@@ -23,7 +23,10 @@ jobs:
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
           ${{ runner.os }}-node-
-
+    
+    - name: connpass
+      run : yarn dataupdate
+    
     - name: install
       run: yarn install
 
