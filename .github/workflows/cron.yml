@@ -2,7 +2,7 @@ name: cron test
 
 on:
   schedule:
-  - cron:  '*/5 * * * *'
+  - cron:  '*/15 * * * *'
 
 jobs:
   stale:
@@ -19,14 +19,6 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '13.x'
-
-    - name: Cache dependencies
-      uses: actions/cache@v1
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
     
-    - name: connpass
+    - name: notify
       run : node ./data/notify.js ${{secrets.NOTIFY_TEST_TOKEN}}
