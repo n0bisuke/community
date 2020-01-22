@@ -1,0 +1,26 @@
+name: deploy
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [13.x]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: yarn
+      run: |
+        yarn install
+        yarn generate
+      env:
+        CI: true
+        
+    - name: gitpush
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        ./.github/gitpush.sh

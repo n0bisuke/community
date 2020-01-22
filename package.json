@@ -1,0 +1,25 @@
+{
+  "name": "community",
+  "version": "1.0.0",
+  "description": "My smashing Nuxt.js project",
+  "author": "のびすけ",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "deploy": "git add -A && git commit -m 'deploy' && git pull origin master && git push origin master",
+    "dataupdate": "node ./data/app.js",
+    "notifytest": "node ./data/notify.js"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.9.3",
+    "axios": "^0.19.1",
+    "bootstrap": "^4.4.1",
+    "bootstrap-vue": "^2.2.2",
+    "connpass-analyzer": "^0.0.3",
+    "nuxt": "^2.11.0"
+  },
+  "devDependencies": {}
+}
