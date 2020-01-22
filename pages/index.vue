@@ -3,7 +3,7 @@
     <div>
       <logo />
       <h1 class="title">
-        community!
+        こんばんわ
       </h1>
       <h2 class="subtitle">
         My smashing Nuxt.js project
