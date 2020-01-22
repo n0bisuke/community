@@ -2,7 +2,7 @@
 
 const fs = require("fs");
 const Connpass = require('connpass-analyzer');
-const groupname = 'enebular';
+const groupname = 'iotlt';
 const community = new Connpass(`https://${groupname}.connpass.com/`);
 
 (async () => {
