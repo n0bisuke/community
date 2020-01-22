@@ -3,7 +3,7 @@ name: github pages
 on:
   push:
     branches:
-    - gh-pages
+    - master
 
 jobs:
   build-deploy:
@@ -43,4 +43,4 @@ jobs:
       env:
         ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: ./dist
+        PUBLISH_DIR: ./docs
