@@ -16,11 +16,16 @@ const community = new Connpass(`https://${groupname}.connpass.com/`);
     c.total_member = await community.getTotalPeople();
     c.new_rate = c.uniq_member / c.total_member; //新規率
 
+    //タイムスタンプ
+    const date = new Date();
+    date.setTime(date.getTime() + 1000*60*60*9);// JSTに変換
+    c.lastupdate = date;
+
     /**
      * データ更新処理
      * */
     const PATH = "./data/connpass.json";
-    const readTxt = fs.writeFileSync(PATH, 'utf8');
+    const readTxt = fs.readFileSync(PATH, 'utf8');
     const communityData = JSON.parse(readTxt);
     communityData[groupname] = c; //新規 or 更新
 
